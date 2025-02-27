@@ -27,7 +27,7 @@ function searchDestination(value) {
     if (!query) {
         resultDiv.innerHTML = "" 
         return
-    } else if (["country", "countries"].includes(query)) {
+    } else if (["country", "countries", "australia", "japan", "brazil"].includes(query)) {
         key = "countries"
     } else if (["beach", "beaches"].includes(query)) {
         key = "beaches"
@@ -44,12 +44,16 @@ function searchDestination(value) {
             let list = data[key]
             console.log(list);
             if (key == "countries") {
+                if (["australia", "japan", "brazil"].includes(query)) {
+                    list = list.filter(a => a.name.toLowerCase() == query);
+                }
                 let cities = list.reduce((acc, item) => acc.concat(...item.cities), [])
                 resultDiv.innerHTML = cities.map(data => {
                     return `<li>
                         <img src="${data.imageUrl}">
                         <span>${data.name}</span>
                         <p>${data.description}</p>
+                        <button>Book Now!</button>
                     </li>`
                 }).join('')
             } else {
@@ -58,6 +62,7 @@ function searchDestination(value) {
                         <img src="${data.imageUrl}">
                         <span>${data.name}</span>
                         <p>${data.description}</p>
+                        <button>Book Now!</button>
                     </li>`
                 }).join('')
             }
