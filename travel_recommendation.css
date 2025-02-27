@@ -1,0 +1,262 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+header {
+    top: 0;
+    position: sticky;
+}
+nav {
+    display: flex;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: #f0f0f0;
+}
+
+.nav-search {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: #f0f0f0;
+}
+
+.nav-search input {
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    border: none;
+    flex: 1;
+}
+
+.nav-search button {
+    border-radius: 50%;
+    border: none;
+}
+.nav-search button:hover {
+    background-color: #f6f6f6;
+}
+.nav-search button:active {
+    background-color: white;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.background-image {
+    background-image: url('hero_image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* position: absolute; */
+    z-index: 1;
+    inset: 0;
+    /* width: 100dvw; */
+    height: 100%;
+}
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.social-links {
+    /* display: block; */
+    position: fixed;
+}
+.social-links ul {
+    list-style-type: none;
+    display: flex;
+    height: 80dvh;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.social-links i {
+    font-size: 2rem;
+    color: black;
+}
+
+.search-results {
+    position: absolute;
+    right: 0;
+    margin-right: 2rem;
+}
+.search-results ul {
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    max-width: 70ch;
+    flex-direction: column;
+    max-height: 90dvh;
+    overflow-y: auto;
+}
+
+.search-results li {
+    background-color: rgba(255, 255, 255);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.search-results li p, .search-results li h3 {
+    margin: 0;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+section {
+    height: 90dvh;
+    scroll-margin-top: 6rem;
+    
+}
+
+.hero {   
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    max-width: 80ch;
+    margin: auto;
+}
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+.hero p {
+    font-size: 2rem;
+    /* margin: 0; */
+}
+.hero button {
+    width: fit-content;
+    margin: 0 auto;
+    color: #333;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.hero button:hover {
+    background-color: #e0e0e0;
+}
+.hero button:active {
+    background-color: #f6f6f6;
+}
+
+.about-us {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.about-us div {
+    margin: 0 auto;
+    max-width: 80ch;
+    align-self: end;
+}
+
+.about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.about-us ul {
+    align-self: start;
+    list-style-type: none;
+    display: flex;
+    padding-left: 0;
+    margin: 0 4rem;
+    align-items: start;
+    justify-content: center;
+    height: fit-content;
+    flex-flow: row wrap;
+    gap: 1rem;
+}
+.about-us li {
+    flex: 1 0 auto;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0 1rem;
+    max-width: 40ch;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+.about-us li h3 {
+    margin-bottom: 0;
+}
+
+.about-us li p {
+    margin-top: 0;
+}
+
+
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80ch;
+    margin: auto;
+}
+
+.contact-us h2 {
+    font-size: 2rem;
+}
+
+.contact-us form {
+    background: rgba(255, 255, 255, 0.5);
+    display: grid;
+    padding: 1rem;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.contact-us input, .contact-us textarea {
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+.contact-us button {
+    width: fit-content;
+    margin: 0 auto;
+    color: #333;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.contact-us button:hover {
+    background-color: #e0e0e0;
+}
+.contact-us button:active {
+    background-color: #f6f6f6;
+}
